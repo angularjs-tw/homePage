@@ -1,0 +1,1 @@
+"use strict";angular.module("homePageApp",["ui.router"]).config(["$stateProvider","$urlRouterProvider",function(a,b){b.otherwise("/login"),a.state("state1",{url:"/state1",templateUrl:"../views/main.html",controller:"MainCtrl"})}]),angular.module("homePageApp").controller("MainCtrl",["$scope",function(a){a.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]}]);
