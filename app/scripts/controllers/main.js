@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('homePageApp')
+var ngTW = angular.module('homePageApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -8,3 +8,7 @@ angular.module('homePageApp')
       'Karma'
     ];
   });
+  
+ngTW.controller('HomeCtrl',['$scope', function HomeCtrl($scope) {
+
+}]);

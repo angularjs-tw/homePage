@@ -12,5 +12,10 @@ angular.module('homePageApp',['ui.router'])
       url: '/state1',
       templateUrl: '../views/main.html',
       controller:'MainCtrl'
+    })
+    .state('home', {
+        url: '/',
+        templateUrl: '../views/home.html',
+        controller: 'HomeCtrl'
     });
   });
