@@ -1,4 +1,23 @@
-<div id="container">
-	<h1>Hello!</h1>
-	
+<div class="sub-container">
+	<button class="filter btn" ng-class="{open: open}" ng-hide="open"
+	ng-click="open=true">
+		<i class="icon-tags"></i>
+	</button>
+	<button class="filter btn" ng-class="{open: open}" ng-show="open" 
+	ng-click="open=false">
+		<i class="icon-tags"></i>
+	</button>
+	<div class="tag-wrap" ng-class="{open: open}">
+		<button ng-repeat="tag in tags" class="btn btn-default {{tag}}">{{tag}}</button>
+	</div>
+	<div id="main">
+		<div class="box" ng-repeat="list in lists">
+			<div class="title">{{list.title}}</div>
+			<a class="url" href="{{list.url}}" target="_blank">launch</a>
+			<div class="tags">
+				<i class="icon-tags"></i>
+				<button ng-repeat="tag in list.tag" class="btn btn-default {{tag}}">{{tag}}</button>
+			</div>
+		</div>
+	</div>
 </div>

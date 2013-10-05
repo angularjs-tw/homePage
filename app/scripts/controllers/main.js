@@ -9,6 +9,13 @@ var ngTW = angular.module('homePageApp')
     ];
   });
   
-ngTW.controller('HomeCtrl',['$scope', function HomeCtrl($scope) {
 
-}]);
+ngTW.controller('HomeCtrl',['$scope','Example', function HomeCtrl($scope, Example) {
+	$scope.lists = Example.lists;
+    $scope.tags = Example.tags;
+    $scope.open = false;
+}])
+
+ngTW.controller('SidebarCtrl',['$scope', function HomeCtrl($scope) {
+
+}])

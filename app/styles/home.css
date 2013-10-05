@@ -1,3 +1,207 @@
-#container {
-	margin-top: 100px;
+@media (min-width: 1em) {
+  /* line 7, ../sass/home.scss */
+  #main {
+    max-width: 118em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #main:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+/* line 14, ../sass/home.scss */
+.sub-container {
+  position: relative;
+  height: 100%;
+}
+/* line 18, ../sass/home.scss */
+#main {
+  padding-top: 0.5em;
+}
+@media (min-width: 48em) {
+  /* line 18, ../sass/home.scss */
+  #main {
+    margin-left: 200px;
+  }
+}
+@media (min-width: 60em) {
+  /* line 18, ../sass/home.scss */
+  #main {
+    margin-right: 200px;
+    padding-top: 58px;
+  }
+}
+
+/* line 28, ../sass/home.scss */
+.filter {
+  position: fixed;
+  right: 0.5em;
+  top: 0.5em;
+  z-index: 2;
+  color: #fff;
+  background: transparent;
+  opacity: 0.8;
+  display: block;
+}
+/* line 37, ../sass/home.scss */
+.filter:hover, .filter.open {
+  color: #fff;
+  opacity: 1;
+}
+/* line 41, ../sass/home.scss */
+.filter.open {
+  background: #271b38;
+}
+@media (min-width: 60em) {
+  /* line 28, ../sass/home.scss */
+  .filter {
+    display: none;
+  }
+}
+
+/* line 48, ../sass/home.scss */
+.tag-wrap {
+  width: 100%;
+  margin-top: 50px;
+  z-index: 0;
+  background: #563d7c;
+  padding: 6px;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  height: 0;
+  overflow: hidden;
+}
+/* line 59, ../sass/home.scss */
+.tag-wrap.open {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  height: auto;
+}
+@media (min-width: 48em) {
+  /* line 48, ../sass/home.scss */
+  .tag-wrap {
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: -ms-calc(100% - 200px);
+    width: -o-calc(100% - 200px);
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    right: 0;
+  }
+}
+@media (min-width: 60em) {
+  /* line 48, ../sass/home.scss */
+  .tag-wrap {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    margin-top: 0;
+    margin-left: 0;
+    height: 100%;
+    padding: 6px;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* line 80, ../sass/home.scss */
+.tag-wrap > .btn {
+  margin: 2px;
+  padding: 4px;
+}
+
+/* line 85, ../sass/home.scss */
+.box {
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 16px;
+  background: #1b1327;
+  color: #a9c283;
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 92, ../sass/home.scss */
+.box:nth-child(2n) {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+@media (min-width: 80em) {
+  /* line 85, ../sass/home.scss */
+  .box {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 97, ../sass/home.scss */
+  .box:nth-child(2n) {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 100, ../sass/home.scss */
+  .box:nth-child(3n) {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 100em) {
+  /* line 85, ../sass/home.scss */
+  .box {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 106, ../sass/home.scss */
+  .box:nth-child(2n) {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 109, ../sass/home.scss */
+  .box:nth-child(3n) {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 112, ../sass/home.scss */
+  .box:nth-child(4n) {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 117, ../sass/home.scss */
+.box .tags > button {
+  margin: 2px;
+  font-size: 14px;
+  line-height: 14px;
 }

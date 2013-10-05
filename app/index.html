@@ -13,11 +13,11 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/home.css">
         <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="styles/style.css"> -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/home.css">
         <link rel="stylesheet" href="styles/sidebar.css">
         <!-- endbuild -->
 </head>
@@ -33,30 +33,39 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div id="header" class="navbar navbar-inverse navbar-fixed-top bs-custom-nav">
-        <a ng-href="" class="navbar-brand">AngularJS.tw</a>
-        <button type="button" class="btn btn-primary github-login">
-            <i class="icon-github-alt"></i>使用 Github 登入
-        </button>
-    </div>
-    <div id="sidebar">
-        <ul>
-            <li class="search-wrap">
-                <i class="icon-search"></i>
-                <input type="text" class="search" placeholder="Search">
-            </li>
-            <li class="list">
-                <i class="icon-file-text-alt"></i>
-                <span>文章</span>
-            </li>
-            <li class="list">
-                <i class="icon-picture"></i>
-                <span>作品</span>
-            </li>
-        </ul>
-    </div>
-    
-    <div ui-view></div>
+        <div id="header" class="navbar navbar-inverse navbar-fixed-top bs-custom-nav">
+            <div class="wrapper">
+                <a ng-href="" class="navbar-brand">AngularJS.tw</a>
+                <button type="button" class="btn btn-primary github-login">
+                    <i class="icon-github-alt"></i>
+                </button>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="sidebar" ng-controller="SidebarCtrl" ng-class="{open: open}">
+                <button class="menu btn" ng-click="open=true" ng-hide="open">
+                    <i class="icon-reorder"></i>
+                </button>
+                <button class="menu btn" ng-click="open=false" ng-show="open">
+                    <i class="icon-reorder"></i>
+                </button>
+                <ul>
+                    <li class="search-wrap">
+                        <i class="icon-search"></i>
+                        <input type="text" class="search" placeholder="Search">
+                    </li>
+                    <li class="list">
+                        <i class="icon-file-text-alt"></i>
+                        <span>文章</span>
+                    </li>
+                    <li class="list">
+                        <i class="icon-picture"></i>
+                        <span>作品</span>
+                    </li>
+                </ul>
+            </div>
+            <div ui-view></div>
+        </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -81,6 +90,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/factory/factory.js"></script>
         <!-- endbuild -->
 </body>
 </html>

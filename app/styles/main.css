@@ -21,42 +21,89 @@ body {
     letter-spacing: -1px;
 }
 
+/* line 10, ../sass/style.scss */
 html, body {
   background: #dad0e8;
 }
 
-/* line 9, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
 input {
   border: 0;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
+.wrapper {
+  margin: 0 auto;
+}
+@media (min-width: 100em) {
+  /* line 23, ../sass/style.scss */
+  .wrapper {
+    max-width: 1920px;
+  }
+}
+
+/* line 30, ../sass/style.scss */
+#header {
+  z-index: 1;
+}
+/* line 32, ../sass/style.scss */
 #header.bs-custom-nav {
   background: #563d7c;
   border-color: #463265;
-  left: 200px;
+  margin: 0 auto;
 }
-/* line 24, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 #header .navbar-brand {
-    font-size: 1.5em;
-    border: 0;
-    height: 45px;
   color: #fff;
   opacity: 0.9;
+  position: absolute;
+  left: 50%;
+  margin-left: -69px;
 }
-/* line 28, ../sass/style.scss */
+@media (min-width: 48em) {
+  /* line 38, ../sass/style.scss */
+  #header .navbar-brand {
+    position: static;
+    margin-left: 200px;
+  }
+}
+/* line 49, ../sass/style.scss */
 #header .github-login {
   float: right;
   margin: 0.5em;
+  margin-right: 50px;
+  position: relative;
 }
-/* line 31, ../sass/style.scss */
-#header .github-login > i {
-  padding-right: 0.5em;
+@media (min-width: 48em) {
+  /* line 49, ../sass/style.scss */
+  #header .github-login {
+    width: 154px;
+    height: 34px;
+  }
+  /* line 57, ../sass/style.scss */
+  #header .github-login > i {
+    position: absolute;
+    left: 12px;
+    top: 9px;
+  }
+  /* line 62, ../sass/style.scss */
+  #header .github-login:after {
+    content: '使用 Github 登入';
+    position: absolute;
+    top: 6px;
+    right: 9px;
+  }
+}
+@media (min-width: 60em) {
+  /* line 49, ../sass/style.scss */
+  #header .github-login {
+    margin-right: 8px;
+  }
 }

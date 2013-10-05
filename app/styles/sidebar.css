@@ -2,27 +2,83 @@
 #sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  display: block;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   border-right: 1px solid #463265;
   width: 200px;
   background: #4d366f;
   height: 100%;
+  z-index: 2;
 }
-/* line 10, ../sass/sidebar.scss */
+/* line 3, ../sass/sidebar.scss */
+#sidebar .menu {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  margin: 0.5em;
+  background: transparent;
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 11, ../sass/sidebar.scss */
+#sidebar .menu:hover {
+  opacity: 1;
+}
+@media (min-width: 48em) {
+  /* line 3, ../sass/sidebar.scss */
+  #sidebar .menu {
+    display: none;
+  }
+}
+/* line 23, ../sass/sidebar.scss */
+#sidebar.open {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 25, ../sass/sidebar.scss */
+#sidebar.open .menu {
+  opacity: 1;
+  background: #271b38;
+}
+@media (min-width: 48em) {
+  /* line 2, ../sass/sidebar.scss */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    display: block;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+/* line 41, ../sass/sidebar.scss */
 #sidebar .search-wrap {
   position: relative;
   border-bottom: 1px solid #463265;
 }
-/* line 13, ../sass/sidebar.scss */
+/* line 44, ../sass/sidebar.scss */
 #sidebar .search-wrap > .icon-search {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 1em;
+  left: 1em;
   opacity: 0.8;
 }
-/* line 20, ../sass/sidebar.scss */
+/* line 51, ../sass/sidebar.scss */
 #sidebar .search {
-  margin: 8px;
+  margin: 0.5em;
   width: 184px;
   height: 33px;
   border-radius: 17px;
@@ -55,17 +111,17 @@
   color: #000;
   opacity: 0.4;
 }
-/* line 32, ../sass/sidebar.scss */
+/* line 63, ../sass/sidebar.scss */
 #sidebar .search:focus {
   background: #bbb1ca;
   color: #666;
 }
-/* line 37, ../sass/sidebar.scss */
+/* line 68, ../sass/sidebar.scss */
 #sidebar .list {
   color: #fff;
   line-height: 49px;
-  padding-left: 8px;
-  font-size: 16px;
+  padding-left: 0.5em;
+  font-size: 1em;
   position: relative;
   background: #322449;
   border-bottom: 1px solid #463265;
@@ -75,21 +131,21 @@
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 47, ../sass/sidebar.scss */
+/* line 78, ../sass/sidebar.scss */
 #sidebar .list > i {
   width: 30px;
-  padding-left: 8px;
+  padding-left: 0.5em;
 }
-/* line 51, ../sass/sidebar.scss */
+/* line 82, ../sass/sidebar.scss */
 #sidebar .list > span {
   position: absolute;
   left: 80px;
 }
-/* line 55, ../sass/sidebar.scss */
+/* line 86, ../sass/sidebar.scss */
 #sidebar .list:hover {
   opacity: 0.9;
 }
-/* line 58, ../sass/sidebar.scss */
+/* line 89, ../sass/sidebar.scss */
 #sidebar .list.active {
   opacity: 0.9;
   background: #0f0b15;
